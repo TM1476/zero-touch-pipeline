@@ -21,7 +21,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>Code Analyzer Tool</h1>
+        <h1>Pro Code Analyzer v2</h1>
         <p>Paste your code/text below to analyze it using the automated pipeline.</p>
         <form method="POST">
             <textarea name="user_code" placeholder="Paste your code here..."></textarea><br>
