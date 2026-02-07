@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-Touch Code Analyzer | AI-Powered Bug Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-bug"></i>
+                    <h1>Zero-Touch Analyzer</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#analyzer">Analyzer</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">AI-Powered Code Analysis</h2>
+                <p class="hero-subtitle">
+                    Automatically detect bugs, security issues, and code quality problems in your code.
+                    Supports Python, C, C++, Java, and JavaScript.
+                </p>
+                <a href="#analyzer" class="cta-button">
+                    <i class="fas fa-code"></i> Start Analyzing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Zero-Touch Analyzer?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Bug Detection</h3>
+                    <p>Automatically identifies syntax errors, logic bugs, and runtime issues in your code.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Analysis</h3>
+                    <p>Detects security vulnerabilities like buffer overflows, SQL injection risks, and unsafe functions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Smart Suggestions</h3>
+                    <p>Get actionable recommendations on how to fix detected issues with best practices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Multi-Language</h3>
+                    <p>Supports Python, C, C++, Java, and JavaScript with language-specific analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Real-Time Analysis</h3>
+                    <p>Get instant feedback on your code quality with fast, efficient processing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Quality Score</h3>
+                    <p>Receive a code quality score to track improvements and maintain standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Select Language</h3>
+                    <p>Choose the programming language of your code from the dropdown menu.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Paste Your Code</h3>
+                    <p>Copy and paste your code into the editor or upload a file.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Receive detailed analysis with bugs, warnings, and fix suggestions instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analyzer" class="analyzer-section">
+        <div class="container">
+            <h2 class="section-title">Code Analyzer</h2>
+            
+            <div class="language-selector">
+                <label for="language">
+                    <i class="fas fa-code"></i> Select Programming Language:
+                </label>
+                <select id="language" class="language-dropdown">
+                    <option value="python">Python</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+            </div>
+
+            <div class="analyzer-container">
+                <div class="code-input-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-edit"></i> Your Code</h3>
+                        <button id="clearBtn" class="clear-btn">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                    <textarea 
+                        id="codeInput" 
+                        class="code-textarea" 
+                        placeholder="Paste your code here or start typing...&#10;&#10;Example (Python):&#10;def hello():&#10;    print('Hello World')&#10;    return True"
+                        spellcheck="false"
+                    ></textarea>
+                    <div class="input-footer">
+                        <span class="line-count">Lines: <span id="lineCount">0</span></span>
+                        <button id="analyzeBtn" class="analyze-btn">
+                            <i class="fas fa-play-circle"></i> Analyze Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <div class="section-header">
+                        <h3><i class="fas fa-chart-bar"></i> Analysis Results</h3>
+                        <div id="qualityScore" class="quality-score hidden">
+                            Score: <span id="scoreValue">0</span>/100
+                        </div>
+                    </div>
+                    
+                    <div id="resultsContainer" class="results-container">
+                        <div class="empty-state">
+                            <i class="fas fa-code"></i>
+                            <p>No analysis yet</p>
+                            <span>Paste your code and click "Analyze Code" to get started</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-bug"></i> Zero-Touch Analyzer</h4>
+                    <p>AI-powered code analysis for better software quality</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Supported Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>C / C++</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li>Bug Detection</li>
+                        <li>Security Analysis</li>
+                        <li>Code Quality Score</li>
+                        <li>Fix Suggestions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zero-Touch Analyzer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Analyzing your code...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
