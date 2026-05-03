@@ -543,11 +543,11 @@ copies of the Software...
 
 ## 📞 Contact
 
-**Project Maintainer:** [Your Name]
+**Project Maintainer:** [Mahalakshmi.K]
 
-- **GitHub:** [@yourusername](https://github.com/yourusername)
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- **GitHub:** [@Mahalakshmi](https://github.com/TM1476)
+- **Email:** 1476mahalakshmi@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/mahalakshmi-kamaraj-005809290/
 
 ---
 
